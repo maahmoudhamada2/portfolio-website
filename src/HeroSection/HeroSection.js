@@ -1,5 +1,6 @@
 import { StyleSheet, css } from "aphrodite/no-important";
 import heroBG from '../assets/heroSectionBg.jpg';
+import Socials from "../Socials/Socials";
 
 const heroStyle = StyleSheet.create({
     sectionContainer: {
@@ -48,6 +49,9 @@ const heroStyle = StyleSheet.create({
     },
     articleContainer: {
         '@media (max-width: 481px)': {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
             position: 'relative'
         }
     },
@@ -106,6 +110,7 @@ export default function HeroSection() {
                     <button className={css(heroStyle.ctaBtns, heroStyle.primBtn)}>Contact Me</button>
                     <button className={css(heroStyle.ctaBtns, heroStyle.secBtn)}>About Me</button>
                 </div>
+                <Socials />
             </article>
         </section>
     )
