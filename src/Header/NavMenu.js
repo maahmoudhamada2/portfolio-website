@@ -91,13 +91,6 @@ const navMenuStyle = StyleSheet.create({
             }
         }
     },
-    backDropEffect: {
-        width: '100%',
-        height: '100vh',
-        position: 'fixed',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)'
-    },
-
 })
 export default function NavMenu() {
     const [expand, setExpand] = useState(false)
@@ -105,7 +98,6 @@ export default function NavMenu() {
     return (
         <>
             <button onClick={toggleMenu} className={css(navMenuStyle.navBtn, expand && navMenuStyle.expandNavbtn)}></button>
-            <label onClick={toggleMenu} className={css(expand && navMenuStyle.backDropEffect)}></label>
             <nav className={css(navMenuStyle.navContainer, expand && navMenuStyle.expandNavContainer)}>
                 <ul className={css(navMenuStyle.listContainer, expand && navMenuStyle.expandListContainer)}>
                     <NavItems toggleMenu={toggleMenu} />

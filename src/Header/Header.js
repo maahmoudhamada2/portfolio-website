@@ -10,7 +10,7 @@ const headerStyle = StyleSheet.create({
             display: 'flex',
             justifyContent: 'space-between',
             backgroundColor: 'black',
-            position: 'fixed'
+            zIndex: '1'
         }
     },
     logo: {
