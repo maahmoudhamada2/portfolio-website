@@ -2,17 +2,11 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 
 const iconStyle = StyleSheet.create({
     svg: {
-        width: '36px',
-        height: '36px',
-        backgroundColor: 'transparent',
-        ':hover path': {
-            fill: 'red',
-            transition: 'fill 0.5s'
-        },
         '@media (max-width: 481px)': {
             width: '32px',
-            height: '32px'
-        }
+            height: '32px',
+            backgroundColor: 'transparent',
+        },
     },
     path: {
         fill: 'white',
@@ -23,6 +17,7 @@ const iconStyle = StyleSheet.create({
 export const FacebookIcon = () => {
     return (
         <svg
+            role="img"
             className={css(iconStyle.svg)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -43,6 +38,7 @@ export const FacebookIcon = () => {
 export const GithubIcon = () => {
     return (
         <svg
+            role="img"
             className={css(iconStyle.svg)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -60,6 +56,7 @@ export const GithubIcon = () => {
 export const InstagramIcon = () => {
     return (
         <svg
+            role="img"
             className={css(iconStyle.svg)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -77,6 +74,7 @@ export const InstagramIcon = () => {
 export const LinkedinIcon = () => {
     return (
         <svg
+            role="img"
             className={css(iconStyle.svg)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -99,6 +97,7 @@ export const LinkedinIcon = () => {
 export const TwitterIcon = () => {
     return (
         <svg
+            role="img"
             className={css(iconStyle.svg)}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
