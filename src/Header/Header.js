@@ -15,7 +15,6 @@ const headerStyle = StyleSheet.create({
     },
     logo: {
         height: '100%',
-        zIndex: '1'
     },
 
 })

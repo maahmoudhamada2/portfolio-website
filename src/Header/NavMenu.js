@@ -16,6 +16,7 @@ const navMenuStyle = StyleSheet.create({
             width: '2rem',
             height: '0.3rem',
             border: '0',
+            outline: '0',
             borderRadius: '20px',
             position: 'absolute',
             top: '3rem',
@@ -49,7 +50,7 @@ const navMenuStyle = StyleSheet.create({
     },
     listContainer: {
         '@media (max-width: 480px)': {
-            width: '100%',
+            width: '60%',
             height: '100vh',
             position: 'fixed',
             top: '0',
@@ -57,13 +58,12 @@ const navMenuStyle = StyleSheet.create({
             backgroundColor: 'black',
             display: 'flex',
             flexDirection: 'column',
-            gap: '3rem',
-            justifyContent: 'center',
+            gap: '3.5rem',
+            justifyContent: 'flex-end',
             alignItems: 'center',
             transform: 'translateX(100%)',
             transition: 'transform 0.5s',
             boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.7)',
-            marginTop: '2rem',
             padding: '2rem'
         }
     },
@@ -91,6 +91,16 @@ const navMenuStyle = StyleSheet.create({
             }
         }
     },
+    backdropEffect: {
+        '@media (max-width: 481px)': {
+            width: '100%',
+            height: '100vh',
+            position: 'fixed',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            backdropFilter: 'blur(1px)',
+            transition: 'all 0.5s'
+        }
+    }
 })
 export default function NavMenu() {
     const [expand, setExpand] = useState(false)
@@ -98,6 +108,7 @@ export default function NavMenu() {
     return (
         <>
             <button onClick={toggleMenu} className={css(navMenuStyle.navBtn, expand && navMenuStyle.expandNavbtn)}></button>
+            <label onClick={toggleMenu} className={css(expand && navMenuStyle.backdropEffect)}></label>
             <nav className={css(navMenuStyle.navContainer, expand && navMenuStyle.expandNavContainer)}>
                 <ul className={css(navMenuStyle.listContainer, expand && navMenuStyle.expandListContainer)}>
                     <NavItems toggleMenu={toggleMenu} />
