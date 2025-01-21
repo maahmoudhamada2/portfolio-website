@@ -4,7 +4,9 @@ import NavMenu from "./NavMenu";
 
 const headerStyle = StyleSheet.create({
     headerContainer: {
-        '@media (max-width: 480px)': {
+
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '15vh',
             display: 'flex',
@@ -14,7 +16,10 @@ const headerStyle = StyleSheet.create({
         }
     },
     logo: {
-        height: '100%',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            height: '100%',
+        }
     },
 
 })

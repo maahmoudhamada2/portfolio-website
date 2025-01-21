@@ -4,59 +4,75 @@ import NavItems from "./NavItems";
 
 const navMenuStyle = StyleSheet.create({
     navContainer: {
-        '@media (max-width: 480px)': {
-            width: '70%',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: '50vw',
             height: '100%',
             color: 'white',
             backgroundColor: 'black',
-        }
+        },
+
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 480px)': {
+            width: '60vw',
+        },
+
     },
     navBtn: {
-        '@media (max-width: 480px)': {
-            width: '2rem',
-            height: '0.3rem',
-            border: '0',
-            outline: '0',
+        display: 'none',
+        width: '2.5rem',
+        height: '0.3rem',
+        border: '0',
+        outline: '0',
+        borderRadius: '20px',
+        position: 'absolute',
+        top: '3rem',
+        right: '2rem',
+        zIndex: '1',
+        transition: 'all 0.5s',
+        ':before': {
+            content: "''",
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'white',
             borderRadius: '20px',
             position: 'absolute',
-            top: '3rem',
-            right: '2rem',
-            zIndex: '1',
-            transition: 'transform 0.5s',
-            ':before': {
-                content: "''",
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'white',
-                borderRadius: '20px',
-                position: 'absolute',
-                top: '-10px',
-                right: '0',
-                transition: 'transform 0.5s'
-            },
-            ':after': {
-                content: "''",
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'white',
-                borderRadius: '20px',
-                position: 'absolute',
-                top: '10px',
-                right: '0',
-                opacity: '1',
-                transition: 'transform 0.5s, opacity 0.5s',
-            }
-        }
+            top: '-10px',
+            right: '0',
+            transition: 'all 0.5s'
+        },
+        ':after': {
+            content: "''",
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'white',
+            borderRadius: '20px',
+            position: 'absolute',
+            top: '10px',
+            right: '0',
+            opacity: '1',
+            transition: 'transform 0.5s, opacity 0.5s',
+        },
+        // Mobile & tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            display: 'block'
+        },
+
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 480px)': {
+            width: '2rem',
+        },
     },
     listContainer: {
-        '@media (max-width: 480px)': {
-            width: '60%',
+
+        // Mobile & tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            display: 'flex',
+            backgroundColor: 'black',
             height: '100vh',
             position: 'fixed',
             top: '0',
             right: '0',
-            backgroundColor: 'black',
-            display: 'flex',
             flexDirection: 'column',
             gap: '3.5rem',
             justifyContent: 'flex-end',
@@ -65,19 +81,27 @@ const navMenuStyle = StyleSheet.create({
             transition: 'transform 0.5s',
             boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.7)',
             padding: '2rem'
+        },
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 480px)': {
+            width: '60vw'
+        },
+
+        // Tablet screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            width: '50vw'
         }
     },
-    expandNavContainer: {
-        '@media (max-width: 480px)': {
-        }
-    },
+
     expandListContainer: {
-        '@media (max-width: 480px)': {
+        // Mobile & tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             transform: 'translateX(0)',
         }
     },
     expandNavbtn: {
-        '@media (max-width: 480px)': {
+        // Mobile & tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             position: 'fixed',
             transform: 'rotate(45deg)',
             ':before': {
@@ -92,7 +116,8 @@ const navMenuStyle = StyleSheet.create({
         }
     },
     backdropEffect: {
-        '@media (max-width: 481px)': {
+        // Mobile & tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '100vh',
             position: 'fixed',
