@@ -1,9 +1,19 @@
 import Header from "../Header/Header";
+import HeroSection from '../HeroSection/HeroSection';
+import Projects from '../Projects/Projects';
+import AboutMe from '../AboutMe/AboutMe';
+import ContactMe from '../ContactMe/ContactMe'
+import Footer from '../Footer/Footer'
 
 export default function App() {
     return (
         <>
             <Header />
+            <HeroSection />
+            <Projects />
+            <AboutMe />
+            <ContactMe />
+            <Footer />
         </>
     )
 }
