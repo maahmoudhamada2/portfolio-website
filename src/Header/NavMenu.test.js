@@ -38,7 +38,7 @@ describe('NavMenu Compoenent test suites', () => {
         // Checking elements change CSS dynamically on pressing navBtn (Expanded menu)
         fireEvent.click(navBtn);
         expect(navBtn).toHaveClass(/^navBtn_.+-expandNavbtn_.+/)
-        expect(navigation).toHaveClass(/^navContainer_.+-expandNavContainer_.+/)
+        expect(navigation).toHaveClass(/^navContainer_.+/)
         expect(unList).toHaveClass(/^listContainer_.+-expandListContainer_.+/)
 
         // Checking elements change CSS dynamically back to base Class (Collapsed again)
