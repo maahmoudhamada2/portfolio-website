@@ -2,9 +2,11 @@ import { StyleSheet, css } from "aphrodite/no-important";
 
 const navItemsStyle = StyleSheet.create({
     listItem: {
-        '@media (max-width: 480px)': {
+        
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
-            fontSize: '1.5rem',
+            fontSize: 'calc(1rem + 1vw)',
             fontWeight: 'bold',
             borderBottom: ' 1px solid #80808063',
             paddingBottom: '1.5rem',
@@ -12,7 +14,8 @@ const navItemsStyle = StyleSheet.create({
         }
     },
     anchors: {
-        '@media (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             color: 'white',
             textDecoration: 'none'
         }
