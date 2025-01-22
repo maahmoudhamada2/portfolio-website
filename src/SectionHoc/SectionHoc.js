@@ -12,17 +12,19 @@ const sectionStyle = StyleSheet.create({
         backgroundColor: '#eee'
     },
     sectionContainer: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'center',
-            gap: '2rem',
-            padding: '2rem 1rem'
+            gap: 'calc(1rem + 3vh)',
+            padding: '2rem'
         }
     },
     sectionHeader: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -33,23 +35,28 @@ const sectionStyle = StyleSheet.create({
         }
     },
     headerTitle: {
-        '@media (max-width: 481px)': {
-            fontSize: '1.5rem',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            fontSize: 'calc(1rem + 2vw)',
             width: '50%',
             color: 'red',
         }
     },
     headerSubTitle: {
-        '@media (max-width: 481px)': {
-            fontSize: '2rem'
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            fontSize: 'calc(2rem + 1vw)',
+            lineHeight: '3rem'
         }
     },
     headerParagraph: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             color: 'gray',
             fontWeight: '100',
-            lineHeight: '1.5rem',
+            lineHeight: '1.7rem',
+            textAlign: 'center'
         }
     }
 })
