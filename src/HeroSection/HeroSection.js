@@ -4,7 +4,8 @@ import Socials from "../Socials/Socials";
 
 const heroStyle = StyleSheet.create({
     sectionContainer: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '100vh',
             textAlign: 'center',
@@ -32,23 +33,28 @@ const heroStyle = StyleSheet.create({
         }
     },
     headerContainer: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tabelt screen width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             position: 'relative',
-            fontSize: '2rem',
+            fontSize: 'calc(1.5rem + 2vw)',
             fontWeight: 'bold',
+            lineHeight: '3.5rem',
             color: 'red'
-        }
+        },
     },
     headerSpan: {
-        '@media (max-width: 481px)': {
-            display: 'inline-block',
-            margin: '2.5rem 0',
-            fontSize: '2.5rem',
-            color: 'white'
+        // Mobile & tabelt screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            display: 'block',
+            color: 'white',
+            fontSize: 'calc(2rem + 2vw)',
+            margin: 'calc(1rem + 1vh) 0',
         }
     },
     articleContainer: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -56,14 +62,16 @@ const heroStyle = StyleSheet.create({
         }
     },
     articleParagraph: {
-        '@media (max-width: 481px)': {
-            fontSize: '1.5rem',
-            marginBottom: '3.5rem',
-            letterSpacing: '0.2rem'
-        }
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            fontSize: 'calc(1rem + 1vw)',
+            marginBottom: 'calc(2rem + 3vh)',
+            letterSpacing: '0.2rem',
+        },
     },
     paragraphSpan: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             borderRight: '2px solid red',
             borderLeft: '2px solid red',
             paddingLeft: '1rem',
@@ -72,24 +80,37 @@ const heroStyle = StyleSheet.create({
         }
     },
     ctaContainer: {
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'space-between',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: '80%',
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '5vw'
+        }
     },
     ctaBtns: {
-        width: '145px',
-        height: '55px',
-        color: 'white',
-        fontSize: '1.1rem',
-        borderRadius: '90px'
+        // Mobile & Tablet screen width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: 'calc(9rem + 3vw)',
+            height: 'calc(3rem + 2vh)',
+            color: 'white',
+            fontSize: 'calc(0.9rem + 1vw)',
+        }
     },
     primBtn: {
-        backgroundColor: 'red',
-        border: '0'
+
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            backgroundColor: 'red',
+            border: '0'
+        }
     },
     secBtn: {
-        backgroundColor: 'transparent',
-        border: '2px solid red'
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            backgroundColor: 'transparent',
+            border: '2px solid red'
+        }
     }
 })
 
