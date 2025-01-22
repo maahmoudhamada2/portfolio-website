@@ -3,8 +3,8 @@ import { StyleSheet, css } from "aphrodite/no-important";
 const styles = StyleSheet.create({
     sectionContainer: {
 
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '600px',
             display: 'flex',
@@ -17,11 +17,14 @@ const styles = StyleSheet.create({
             borderRadius: '40px',
             backgroundColor: 'rgba(20, 21, 24, 0.99)',
             transition: '0.5s',
+        },
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            width: '65%',
         }
     },
     formTitle: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             marginTop: '1rem',
             color: 'rgb(100, 255, 218)',
             fontWeight: 'bold',
@@ -29,8 +32,8 @@ const styles = StyleSheet.create({
         }
     },
     form: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -41,8 +44,8 @@ const styles = StyleSheet.create({
         }
     },
     formFields: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             padding: '1rem',
             border: '0',
@@ -54,14 +57,14 @@ const styles = StyleSheet.create({
         }
     },
     textAreaField: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             height: '200px'
         }
     },
     formSubmitBtn: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '44%',
             padding: '1rem',
             color: 'gray',
