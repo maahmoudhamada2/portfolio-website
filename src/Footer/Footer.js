@@ -3,8 +3,8 @@ import Socials from "../Socials/Socials";
 
 const footerStyle = StyleSheet.create({
     footerContainer: {
-        // Mobile & Tabelt screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -17,8 +17,8 @@ const footerStyle = StyleSheet.create({
         }
     },
     copyRight: {
-        // Mobile & Tabelt screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             fontSize: '0.9rem',
             color: 'gray',
             textAlign: 'center'
