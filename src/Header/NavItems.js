@@ -2,23 +2,26 @@ import { StyleSheet, css } from "aphrodite/no-important";
 
 const navItemsStyle = StyleSheet.create({
     listItem: {
-        
+        // Initial styles (all screens)
+        fontWeight: 'bold',
+
         // Mobile & Tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             fontSize: 'calc(1rem + 1vw)',
-            fontWeight: 'bold',
             borderBottom: ' 1px solid #80808063',
             paddingBottom: '1.5rem',
             textAlign: 'center'
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 787px) and (max-width: 1024px)': {
+            fontSize: 'calc(1rem + 0.5vw)'
         }
     },
     anchors: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
-            color: 'white',
-            textDecoration: 'none'
-        }
+        // Initial styles (all screens)
+        color: 'white',
+        textDecoration: 'none'
     }
 })
 

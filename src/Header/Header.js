@@ -4,20 +4,19 @@ import NavMenu from "./NavMenu";
 
 const headerStyle = StyleSheet.create({
     headerContainer: {
-
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             height: '15vh',
             display: 'flex',
             justifyContent: 'space-between',
             backgroundColor: 'black',
             zIndex: '1'
-        }
+        },
     },
     logo: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             height: '100%',
         }
     },

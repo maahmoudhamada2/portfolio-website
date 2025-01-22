@@ -4,19 +4,21 @@ import NavItems from "./NavItems";
 
 const navMenuStyle = StyleSheet.create({
     navContainer: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '50vw',
             height: '100%',
             color: 'white',
             backgroundColor: 'black',
         },
-
         // Mobile screen width
         '@media (min-width: 320px) and (max-width: 480px)': {
             width: '60vw',
         },
-
+        // Laptop (small) screen width
+        '@media (min-width: 787px) and (max-width: 1024px)': {
+            width: '70%'
+        }
     },
     navBtn: {
         display: 'none',
@@ -57,14 +59,12 @@ const navMenuStyle = StyleSheet.create({
         '@media (min-width: 320px) and (max-width: 786px)': {
             display: 'block'
         },
-
         // Mobile screen width
         '@media (min-width: 320px) and (max-width: 480px)': {
             width: '2rem',
         },
     },
     listContainer: {
-
         // Mobile & tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             display: 'flex',
@@ -86,10 +86,17 @@ const navMenuStyle = StyleSheet.create({
         '@media (min-width: 320px) and (max-width: 480px)': {
             width: '60vw'
         },
-
         // Tablet screen width
         '@media (min-width: 481px) and (max-width: 786px)': {
             width: '50vw'
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 787px) and (max-width: 1024px)': {
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'space-around',
+            alignItems: 'center'
         }
     },
 
