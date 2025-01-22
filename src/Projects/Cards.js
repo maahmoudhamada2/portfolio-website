@@ -3,24 +3,32 @@ import { GithubIcon } from "../Socials/SocialSvg";
 
 const cardStyle = StyleSheet.create({
     articleContainer: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             padding: '1rem',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.7)',
-            borderRadius: '20px'
+            borderRadius: '20px',
+            transition: 'all 0.5s'
+        },
+        // Tabelt screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            width: 'calc(3rem + 60vw)'
         }
     },
     cardCover: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             borderRadius: '20px 20px 0 0'
         }
     },
     cardContent: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             display: 'flex',
             flexDirection: 'column',
             padding: '1rem',
@@ -30,25 +38,44 @@ const cardStyle = StyleSheet.create({
         }
     },
     projectCategory: {
-        '@media (max-width: 481px)': {
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            fontSize: 'calc(0.5rem + 2vw)',
             color: 'red',
+        },
+        // Tabelt screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            fontSize: 'calc(0.5rem + 1vw)',
         }
     },
     projectTitle: {
-        '@media (max-width: 481px)': {
-            fontSize: '2rem'
+        // Mobile & Tabelt screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            // fontSize: '2rem',
+            fontSize: 'calc(1rem + 3.5vw)'
+        },
+        // Tabelt screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            fontSize: 'calc(1rem + 2.3vw)'
         }
     },
     projectIntro: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tabelt screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             color: 'gray',
-            lineHeight: '1.3rem',
+            lineHeight: '1.5rem',
             fontFamily: 'lora-regular, serif',
-            fontWeight: '500'
+            fontWeight: '500',
+            fontSize: 'calc(0.5rem + 2vw)'
+        },
+        // Tabelt screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            fontSize: 'calc(0.7rem + 1vw)',
+            lineHeight: '1.7rem'
         }
     },
     codeBtn: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tabelt screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '45px',
             height: '45px',
             border: '0',
