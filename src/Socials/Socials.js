@@ -3,10 +3,11 @@ import { FacebookIcon, GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } fr
 
 const socialList = StyleSheet.create({
     listContainer: {
-        '@media (max-width: 481px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             display: 'flex',
-            marginTop: '4rem',
-            gap: '1rem'
+            marginTop: 'calc(1.5rem + 2vh)',
+            gap: 'calc(1rem + 1vw)'
         }
     }
 })
