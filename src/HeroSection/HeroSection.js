@@ -4,8 +4,8 @@ import Socials from "../Socials/Socials";
 
 const heroStyle = StyleSheet.create({
     sectionContainer: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             height: '100vh',
             textAlign: 'center',
@@ -34,26 +34,35 @@ const heroStyle = StyleSheet.create({
     },
     headerContainer: {
         // Mobile & Tabelt screen width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             position: 'relative',
             fontSize: 'calc(1.5rem + 2vw)',
             fontWeight: 'bold',
             lineHeight: '3.5rem',
             color: 'red'
         },
+        // Laptop (small) screen width
+        '@media (min-width: 767px) and (max-width: 1024px)': {
+            fontSize: 'calc(1.5rem + 2.5vw)'
+        }
     },
     headerSpan: {
-        // Mobile & tabelt screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             display: 'block',
             color: 'white',
             fontSize: 'calc(2rem + 2vw)',
             margin: 'calc(1rem + 1vh) 0',
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 767px) and (max-width: 1024px)': {
+            fontSize: 'calc(1.5rem + 3vw)',
+            margin: 'calc(1rem + 1.5vh) 0',
         }
     },
     articleContainer: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -62,16 +71,16 @@ const heroStyle = StyleSheet.create({
         }
     },
     articleParagraph: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             fontSize: 'calc(1rem + 1vw)',
             marginBottom: 'calc(2rem + 3vh)',
             letterSpacing: '0.2rem',
         },
     },
     paragraphSpan: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             borderRight: '2px solid red',
             borderLeft: '2px solid red',
             paddingLeft: '1rem',
@@ -80,8 +89,8 @@ const heroStyle = StyleSheet.create({
         }
     },
     ctaContainer: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '80%',
             display: 'flex',
             justifyContent: 'center',
@@ -90,24 +99,29 @@ const heroStyle = StyleSheet.create({
     },
     ctaBtns: {
         // Mobile & Tablet screen width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: 'calc(9rem + 3vw)',
             height: 'calc(3rem + 2vh)',
             color: 'white',
             fontSize: 'calc(0.9rem + 1vw)',
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 767px) and (max-width: 1024px)': {
+            width: 'calc(9rem + 3.5vw)',
+            height: 'calc(3rem + 2.5vh)',
         }
     },
     primBtn: {
 
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             backgroundColor: 'red',
             border: '0'
         }
     },
     secBtn: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             backgroundColor: 'transparent',
             border: '2px solid red'
         }
