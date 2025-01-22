@@ -6,9 +6,9 @@ import { ArrowIcon, ClangIcon, CssIcon, HtmlIcon, JavaScriptIcon, MySqlIcon, Pyt
 const styles = StyleSheet.create({
 
     sectionContainer: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
-            width: '90%',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: '80vw',
             height: 'auto',
             display: 'flex',
             flexDirection: 'column',
@@ -17,16 +17,27 @@ const styles = StyleSheet.create({
             transition: 'width 0.5s',
             borderRadius: '40px',
             backgroundColor: 'white',
+        },
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 480px)': {
+            width: '100vw'
+        },
+        // Small tablet screens
+        '@media (min-width: 481px) and (max-width: 546)': {
+            width: '75vw'
+        },
+        // Large tablet screen width
+        '@media (min-width: 547px) and (max-width: 786px)': {
+            width: '70vw'
         }
     },
     sectionHeader: {
-
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
-            padding: '4rem 2rem',
+            padding: '4rem 1rem',
             display: 'flex',
-            gap: '1rem',
+            gap: '1.5rem',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
@@ -54,40 +65,50 @@ const styles = StyleSheet.create({
         }
     },
     headerTitle: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
-            fontSize: '4rem',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            fontSize: 'calc(1rem + 12vw)',
             fontWeight: 'bold',
             borderBottom: '4px solid white',
             letterSpacing: '0.4rem',
             margin: '1rem 0.5rem',
             fontStyle: 'italic',
             padding: '0.5rem'
+        },
+        // Tabelt screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            fontSize: 'calc(1rem + 8vw)',
         }
     },
     headerParagraph: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
-            fontSize: '1rem',
-            lineHeight: '1.7rem'
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: '80%',
+            fontSize: 'calc(0.5rem + 2vw)',
+            lineHeight: '1.5rem'
+        },
+        // Tabel screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            fontSize: 'calc(0.5rem + 1.5vw)',
+            lineHeight: '2rem'
         }
     },
     downloadBtn: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
-            width: '65%',
-            padding: '1rem',
-            borderRadius: '15px',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: 'calc(1rem + 40vw)',
+            padding: 'calc(0.5rem + 2vh)',
             border: '0px',
             backgroundColor: 'red',
             color: 'white',
-            fontSize: '1.1rem',
+            fontSize: 'calc(0.8rem + 1vw)',
             marginTop: '1rem',
-        }
+            lineHeight: 'calc(0.5rem + 2vh)',
+        },
     },
     arrowBtn: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             display: 'flex',
             backgroundColor: 'white',
             borderRadius: '50%',
@@ -100,9 +121,8 @@ const styles = StyleSheet.create({
 
     },
     langContainer: {
-
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '0',
             overflow: 'hidden',
@@ -114,9 +134,8 @@ const styles = StyleSheet.create({
         }
     },
     langContainerDivs: {
-
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '0',
             overflow: 'hidden',
@@ -125,18 +144,18 @@ const styles = StyleSheet.create({
             flexWrap: 'wrap',
             alignItems: 'center',
             gap: '0.5rem',
-        }
+        },
     },
     langTitle: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             fontWeight: 'bold',
             marginTop: '1rem'
         }
     },
     langDescription: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             fontSize: '0.9rem',
             color: 'gray',
             lineHeight: '1.2rem',
@@ -147,38 +166,46 @@ const styles = StyleSheet.create({
     // -------------------------------------------------------  Expand Styles ---------------------------------------------------------
 
     expandSectionContainer: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '80%',
             padding: '0',
             transition: 'width 0.5s'
         }
     },
     expandSectionHeader: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%'
         }
     },
     expandLangContainer: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
-            height: '1200px',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            height: '1360px',
             padding: '1rem 2rem',
             transition: 'all 0.5s',
             alignItems: 'center'
+        },
+        // Tablet screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            height: '700px'
         }
     },
     expandLangContDivs: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
-            height: '150px',
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            height: '200px',
             borderBottom: '1px solid gray'
+        },
+        // Tablet screen width
+        '@media (min-width: 481px) and (max-width: 786px)': {
+            width: '45%',
         }
     },
     expandArrowBtn: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             transform: 'rotate(270deg)',
             transition: 'transform 0.5s'
         }
@@ -240,5 +267,3 @@ export default function SkillCard() {
         </section>
     )
 }
-
-
