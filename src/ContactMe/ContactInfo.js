@@ -4,8 +4,8 @@ import { LocationPinIcon, MailIcon, PhoneCallIcon } from "./ContactInfoIcons"
 const contactInfoStyle = StyleSheet.create({
     sectionContainer: {
 
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '510px',
             display: 'flex',
@@ -16,8 +16,8 @@ const contactInfoStyle = StyleSheet.create({
         }
     },
     articleContainer: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '150px',
             display: 'flex',
@@ -27,8 +27,8 @@ const contactInfoStyle = StyleSheet.create({
         }
     },
     contactInfoHeading: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             fontSize: '1.2rem',
             fontWeight: 'bold',
             marginTop: '2rem',
@@ -38,8 +38,8 @@ const contactInfoStyle = StyleSheet.create({
         }
     },
     paragraphColor: {
-        // Mobile screen width
-        '@media only screen and (min-width: 320px) and (max-width: 480px)': {
+        // Mobile & Tablet screens width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             color: 'gray'
         }
     }
