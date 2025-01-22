@@ -2,9 +2,10 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 
 const iconStyle = StyleSheet.create({
     svg: {
-        '@media (max-width: 481px)': {
-            width: '32px',
-            height: '32px',
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 786px)': {
+            width: 'calc(1rem + 3vw)',
+            height: 'calc(1rem + 3vh)',
             backgroundColor: 'transparent',
         },
     },
