@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 const iconStyle = StyleSheet.create({
     svg: {
         // Mobile screen width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: 'calc(1rem + 3vw)',
             height: 'calc(1rem + 3vh)',
             backgroundColor: 'transparent',

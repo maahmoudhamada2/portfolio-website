@@ -4,7 +4,7 @@ import { FacebookIcon, GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } fr
 const socialList = StyleSheet.create({
     listContainer: {
         // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             display: 'flex',
             marginTop: 'calc(1.5rem + 2vh)',
             gap: 'calc(1rem + 1vw)'
