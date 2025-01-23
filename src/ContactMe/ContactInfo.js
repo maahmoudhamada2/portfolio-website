@@ -4,8 +4,8 @@ import { LocationPinIcon, MailIcon, PhoneCallIcon } from "./ContactInfoIcons"
 const contactInfoStyle = StyleSheet.create({
     sectionContainer: {
 
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             height: '510px',
             display: 'flex',
@@ -13,33 +13,45 @@ const contactInfoStyle = StyleSheet.create({
             justifyContent: 'space-around',
             alignItems: 'center',
             margin: '1rem 0',
+            gap: '4rem'
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 786px) and (max-width: 1024px)': {
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            gap: '0'
         }
     },
     articleContainer: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             height: '150px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 786px) and (max-width: 1024px)': {
+            width: '50%',
+            height: '300px'
         }
     },
     contactInfoHeading: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
-            fontSize: '1.2rem',
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
+            fontSize: 'calc(1rem + 1vw)',
             fontWeight: 'bold',
-            marginTop: '2rem',
-            marginBottom: '0.5rem',
+            marginTop: 'calc(1rem + 1vh)',
+            marginBottom: 'calc(0.5rem + 1vh)',
             color: 'red',
             letterSpacing: '0.2rem'
         }
     },
     paragraphColor: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             color: 'gray'
         }
     }

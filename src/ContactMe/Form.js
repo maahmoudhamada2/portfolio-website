@@ -2,9 +2,8 @@ import { StyleSheet, css } from "aphrodite/no-important";
 
 const styles = StyleSheet.create({
     sectionContainer: {
-
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             height: '600px',
             display: 'flex',
@@ -18,13 +17,23 @@ const styles = StyleSheet.create({
             backgroundColor: 'rgba(20, 21, 24, 0.99)',
             transition: '0.5s',
         },
-        '@media (min-width: 481px) and (max-width: 786px)': {
-            width: '65%',
+        // Small Tablet screen width
+        '@media (min-width: 481px) and (max-width: 546px)': {
+            width: '100%',
+        },
+        // Tablet screen width
+        '@media (min-width: 547px) and (max-width: 786px)': {
+            width: 'calc(1rem + 65vw)'
+        },
+        // Laptop (small) screen width
+        '@media (min-width: 786px) and (max-width: 1024px)': {
+            minWidth: '60%',
+            maxWidth: '60%'
         }
     },
     formTitle: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             marginTop: '1rem',
             color: 'rgb(100, 255, 218)',
             fontWeight: 'bold',
@@ -32,8 +41,8 @@ const styles = StyleSheet.create({
         }
     },
     form: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -44,8 +53,8 @@ const styles = StyleSheet.create({
         }
     },
     formFields: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '100%',
             padding: '1rem',
             border: '0',
@@ -57,14 +66,14 @@ const styles = StyleSheet.create({
         }
     },
     textAreaField: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             height: '200px'
         }
     },
     formSubmitBtn: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 786px)': {
+        // Mobile, Tablet & Laptop (small) screens width
+        '@media (min-width: 320px) and (max-width: 1024px)': {
             width: '44%',
             padding: '1rem',
             color: 'gray',
