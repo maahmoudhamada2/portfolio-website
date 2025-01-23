@@ -4,21 +4,17 @@ import NavMenu from "./NavMenu";
 
 const headerStyle = StyleSheet.create({
     headerContainer: {
-        // Mobile, Tablet & laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            height: '15vh',
-            display: 'flex',
-            justifyContent: 'space-between',
-            backgroundColor: 'black',
-            zIndex: '1'
-        },
+        // Shared CSS styles for all sizes
+        width: '100%',
+        height: '15vh',
+        display: 'flex',
+        justifyContent: 'space-between',
+        backgroundColor: 'black',
+        zIndex: '2'
     },
     logo: {
-        // Mobile, Tablet & laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            height: '100%',
-        }
+        // Shared CSS styles for all sizes
+        height: '100%',
     },
 
 })

@@ -4,19 +4,17 @@ import NavItems from "./NavItems";
 
 const navMenuStyle = StyleSheet.create({
     navContainer: {
-        // Mobile, Tablet & laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '50vw',
-            height: '100%',
-            color: 'white',
-            backgroundColor: 'black',
-        },
+        // Shared CSS style for all sizes
+        width: '70vw',
+        height: '100%',
+        color: 'white',
+        backgroundColor: 'black',
         // Mobile screen width
-        '@media (min-width: 320px) and (max-width: 480px)': {
+        '@media (min-width: 320px) and (max-width: 481px)': {
             width: '60vw',
         },
         // Laptop (small) screen width
-        '@media (min-width: 787px) and (max-width: 1024px)': {
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             width: '70%'
         }
     },
@@ -60,15 +58,17 @@ const navMenuStyle = StyleSheet.create({
             display: 'block'
         },
         // Mobile screen width
-        '@media (min-width: 320px) and (max-width: 480px)': {
+        '@media (min-width: 320px) and (max-width: 481px)': {
             width: '2rem',
         },
     },
     listContainer: {
+        // Shared CSS styles for all sizes
+        display: 'flex',
+        backgroundColor: 'black',
+        alignItems: 'center',
         // Mobile & tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
-            display: 'flex',
-            backgroundColor: 'black',
             height: '100vh',
             position: 'fixed',
             top: '0',
@@ -76,14 +76,13 @@ const navMenuStyle = StyleSheet.create({
             flexDirection: 'column',
             gap: '3.5rem',
             justifyContent: 'flex-end',
-            alignItems: 'center',
             transform: 'translateX(100%)',
             transition: 'transform 0.5s',
             boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.7)',
             padding: '2rem'
         },
         // Mobile screen width
-        '@media (min-width: 320px) and (max-width: 480px)': {
+        '@media (min-width: 320px) and (max-width: 481px)': {
             width: '60vw'
         },
         // Tablet screen width
@@ -91,12 +90,10 @@ const navMenuStyle = StyleSheet.create({
             width: '50vw'
         },
         // Laptop (small) screen width
-        '@media (min-width: 787px) and (max-width: 1024px)': {
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             width: '100%',
             height: '100%',
-            display: 'flex',
             justifyContent: 'space-around',
-            alignItems: 'center'
         }
     },
 
