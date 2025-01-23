@@ -3,11 +3,17 @@ import { FacebookIcon, GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } fr
 
 const socialList = StyleSheet.create({
     listContainer: {
+        // Shared CSS styles for all sizes
+        display: 'flex',
         // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            display: 'flex',
+        '@media (min-width: 320px) and (max-width: 786px)': {
             marginTop: 'calc(1.5rem + 2vh)',
             gap: 'calc(1rem + 1vw)'
+        },
+        // Laptop & Desktop screens width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
+            marginTop: 'calc(1.5rem + 4vh)',
+            gap: 'calc(0.5rem + 0.6vw)'
         }
     }
 })

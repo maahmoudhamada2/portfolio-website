@@ -2,12 +2,22 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 
 const iconStyle = StyleSheet.create({
     svg: {
+        // Shared CSS styles for all sizes
+        backgroundColor: 'transparent',
         // Mobile screen width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (min-width: 320px) and (max-width: 1200px)': {
             width: 'calc(1rem + 3vw)',
             height: 'calc(1rem + 3vh)',
-            backgroundColor: 'transparent',
         },
+        // Laptop & Desktop screens width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
+            width: 'calc(1rem + 3.5vw)',
+            height: 'calc(1rem + 3.5vh)',
+            ':hover path': {
+                fill: 'red',
+                transition: 'fill 0.5s'
+            }
+        }
     },
     path: {
         fill: 'white',
