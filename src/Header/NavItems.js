@@ -2,9 +2,8 @@ import { StyleSheet, css } from "aphrodite/no-important";
 
 const navItemsStyle = StyleSheet.create({
     listItem: {
-        // Initial styles (all screens)
+        // Shared CSS styles for all sizes
         fontWeight: 'bold',
-
         // Mobile & Tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
@@ -14,14 +13,21 @@ const navItemsStyle = StyleSheet.create({
             textAlign: 'center'
         },
         // Laptop (small) screen width
-        '@media (min-width: 787px) and (max-width: 1024px)': {
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             fontSize: 'calc(1rem + 0.5vw)'
         }
     },
     anchors: {
-        // Initial styles (all screens)
+        // Shared CSS styles for all sizes
         color: 'white',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        // Laptop & Desktop screens width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
+            ':hover': {
+                color: 'red',
+                transition: 'all 0.5s'
+            }
+        }
     }
 })
 
