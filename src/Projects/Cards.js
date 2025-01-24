@@ -2,139 +2,137 @@ import { StyleSheet, css } from "aphrodite/no-important";
 import { GithubIcon } from "../Socials/SocialSvg";
 
 const cardStyle = StyleSheet.create({
-    articleContainer: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            padding: '1rem',
-            display: 'flex',
-            flexDirection: 'column',
+    latestContainer: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '2rem',
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 786px)': {
             alignItems: 'center',
-            boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.7)',
-            borderRadius: '20px',
-            transition: 'all 0.5s',
-            position: 'relative'
         },
+        // Laptop (small) & Desktop screens width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+        },
+    },
+    latestTitle: {
+        display: 'none',
+        width: '100%',
+        fontSize: 'calc(1rem + 2vw)',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        color: 'red',
+        margin: '1rem 0',
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            display: 'block'
+        }
+    },
+    largeCard: {
+        width: '400px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.7)',
+        borderRadius: '20px',
+        transition: 'all 0.5s',
+        position: 'relative',
         // Mobile screen width
         '@media (min-width: 320px) and (max-width: 481px)': {
             width: '100%'
         },
-        // Tablet (small screen width)
-        '@media (min-width: 482px) and (max-width: 546px)': {
-            width: '70vw'
-        },
-        // Tabelt screen width
-        '@media (min-width: 547px) and (max-width: 786px)': {
-            width: 'calc(3rem + 60vw)'
-        },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
-            width: '47%'
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            width: 'calc(1rem + 27.5vw)',
+            padding: '0'
         }
     },
     cardCover: {
+        objectFit: 'cover',
         // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        '@media (min-width: 320px) and (max-width: 1200px)': {
             width: '100%',
             borderRadius: '20px 20px 0 0'
         },
         // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             height: 'calc(1rem + 30vh)'
         }
     },
     cardContent: {
-        // Mobile & Tablet screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '1rem',
-            gap: '1rem',
-            textAlign: 'center',
-            fontWeight: 'bold',
-            marginBottom: '2rem'
+        // Shared CSS styles for all sizes
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '1rem',
+        gap: '1rem',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginBottom: '1rem',
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            height: '300px',
+            marginBottom: '0'
         }
     },
     projectCategory: {
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontSize: 'calc(0.5rem + 2vw)',
-            color: 'red',
-        },
-        // Tabelt screen width
-        '@media (min-width: 481px) and (max-width: 1024px)': {
-            fontSize: 'calc(0.5rem + 1vw)',
-        }
+        color: 'red',
     },
     projectTitle: {
-        // Mobile & Tabelt screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            // fontSize: '2rem',
-            fontSize: 'calc(1rem + 3.5vw)'
-        },
-        // Tabelt screen width
-        '@media (min-width: 481px) and (max-width: 1024px)': {
-            fontSize: 'calc(1rem + 2.3vw)'
-        },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
-            fontSize: 'calc(1rem + 2vw)'
-        }
+        fontSize: '2rem',
     },
     projectIntro: {
-        // Mobile & Tabelt screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            color: 'gray',
-            lineHeight: '1.5rem',
-            fontFamily: 'lora-regular, serif',
-            fontWeight: '500',
-            fontSize: 'calc(0.5rem + 2vw)'
-        },
-        // Tabelt screen width
-        '@media (min-width: 481px) and (max-width: 1024px)': {
-            fontSize: 'calc(0.7rem + 1vw)',
-            lineHeight: '1.7rem'
-        },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
-            fontSize: 'calc(0.5rem + 1vw)',
-            lineHeight: '1.5rem'
-        }
+        color: 'gray',
+        fontFamily: 'lora-regular, serif',
+        fontWeight: '500',
+        lineHeight: '1.5rem'
     },
     codeBtn: {
-        // Mobile & Tabelt screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        // Shared CSS styles for all sizes
+        width: '50px',
+        height: '50px',
+        backgroundColor: 'black',
+        border: '0',
+        borderRadius: '10px',
+        marginBottom: '1rem',
+        // Mobile screen width
+        '@media (min-width: 320px) and (max-width: 481px)': {
             width: '45px',
             height: '45px',
-            border: '0',
-            borderRadius: '5px',
-            backgroundColor: 'black',
         },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
-            padding: '0.5rem'
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            width: '55px',
+            height: '55px'
         }
     }
 })
 
 
-
 export default function Cards({ data }) {
     return (
         <>
-            {data.map((elem) => {
-                return (
-                    <article key={elem.id} className={css(cardStyle.articleContainer)}>
-                        <img className={css(cardStyle.cardCover)} src={elem.img_url} />
-                        <div className={css(cardStyle.cardContent)}>
-                            <p className={css(cardStyle.projectCategory)}>{elem.category}</p>
-                            <h3 className={css(cardStyle.projectTitle)}>{elem.projectTitle}</h3>
-                            <p className={css(cardStyle.projectIntro)}>{elem.introduction}</p>
-                        </div>
-                        <button className={css(cardStyle.codeBtn)}>
-                            <a href={elem.code_url}><GithubIcon /></a>
-                        </button>
-                    </article>
-                )
-            })}
+            <div className={css(cardStyle.latestContainer)}>
+                <h3 className={css(cardStyle.latestTitle)}>Latest Projects</h3>
+                {data.map((elem) => {
+                    return (
+                        <article key={elem.id} className={css(cardStyle.largeCard)}>
+                            <img className={css(cardStyle.cardCover)} src={elem.img_url} />
+                            <div className={css(cardStyle.cardContent)}>
+                                <p className={css(cardStyle.projectCategory)}>{elem.category}</p>
+                                <h3 className={css(cardStyle.projectTitle)}>{elem.projectTitle}</h3>
+                                <p className={css(cardStyle.projectIntro)}>{elem.introduction}</p>
+                            </div>
+                            <button className={css(cardStyle.codeBtn)}>
+                                <a href={elem.code_url}><GithubIcon /></a>
+                            </button>
+                        </article>
+                    )
+                })}
+            </div>
+
         </>
     )
 }
