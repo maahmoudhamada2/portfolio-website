@@ -10,7 +10,8 @@ const navItemsStyle = StyleSheet.create({
             fontSize: 'calc(1rem + 1vw)',
             borderBottom: ' 1px solid #80808063',
             paddingBottom: '1.5rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            marginTop: '2rem'
         },
         // Laptop (small) screen width
         '@media (min-width: 786px)': {
@@ -34,9 +35,8 @@ const navItemsStyle = StyleSheet.create({
 const navItems = [
     { name: 'Home', id: '#herosection', },
     { name: 'Projects', id: '#projects' },
-    { name: 'Blogs', id: '#blogs' },
-    { name: 'Contact Me', id: '#contactMe' },
-    { name: 'About Me', id: '#aboutme' }
+    { name: 'About Me', id: '#aboutme' },
+    { name: 'Contact Me', id: '#contactme' },
 
 ];
 
