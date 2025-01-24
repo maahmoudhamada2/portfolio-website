@@ -96,18 +96,27 @@ const heroStyle = StyleSheet.create({
     },
     primBtn: {
         backgroundColor: 'red',
-        border: '0'
+        border: '0',
     },
     secBtn: {
         backgroundColor: 'transparent',
         border: '2px solid red'
+    },
+    btnsAnchors: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
+        color: 'white',
+        textDecoration: 'none',
     }
 })
 
 
 export default function HeroSection() {
     return (
-        <section className={css(heroStyle.sectionContainer)}>
+        <section id="herosection" className={css(heroStyle.sectionContainer)}>
             <header className={css(heroStyle.headerContainer)}>
                 <h1>Hello, World
                     <span className={css(heroStyle.headerSpan)}>I&apos;m Mahmoud Hamada</span>
@@ -118,8 +127,12 @@ export default function HeroSection() {
                     <span className={css(heroStyle.paragraphSpan)}>Front-End Developer</span>
                 </p>
                 <div className={css(heroStyle.ctaContainer)}>
-                    <button className={css(heroStyle.ctaBtns, heroStyle.primBtn)}>Contact Me</button>
-                    <button className={css(heroStyle.ctaBtns, heroStyle.secBtn)}>About Me</button>
+                    <button className={css(heroStyle.ctaBtns, heroStyle.primBtn)}>
+                        <a className={css(heroStyle.btnsAnchors)} href="#contactme">Contact Me</a>
+                    </button>
+                    <button className={css(heroStyle.ctaBtns, heroStyle.secBtn)}>
+                        <a className={css(heroStyle.btnsAnchors)} href="#aboutme">About Me</a>
+                    </button>
                 </div>
                 <Socials />
             </article>
