@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         },
 
         // Laptop (small) & Desktop screens width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '450px',
             height: '650px',
             flexDirection: 'row'
@@ -84,11 +84,11 @@ const styles = StyleSheet.create({
         },
 
         // Laptop (small) & Desktop screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             fontSize: 'calc(1rem + 7vw)'
         },
         // Desktop screen width
-        '@media (min-width: 1024px) and (max-width: 1200px)': {
+        '@media (min-width: 1024px)': {
             fontSize: 'calc(1rem + 5vw)'
         },
         // Fix design issue
@@ -111,11 +111,11 @@ const styles = StyleSheet.create({
             fontSize: 'calc(0.5rem + 1.7vw)'
         },
         // Laptop (small) & Desktop screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             fontSize: 'calc(1rem + 0.3vw)'
         },
         // Desktop screen width
-        '@media (min-width: 1024px) and (max-width: 1200px)': {
+        '@media (min-width: 1024px)': {
             fontSize: 'calc(1rem + 0.2vw)'
         }
 
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
             height: '0',
         },
         // Laptop (small) & Desktop screens width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '0'
         }
     },
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
             alignItems: 'center'
         },
         // Laptop (small) & Desktop screen width
-        '@media (min-width: 786px) and (max-width: 1200px': {
+        '@media (min-width: 786px)': {
             width: '0',
         }
     },
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
         padding: '0',
         transition: 'width 0.5s',
         // Laptop (small) & Desktop screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '100%',
         }
     },
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
             padding: '4rem 1rem'
         },
         // Desktop screen width
-        '@media (min-width: 1024px) and (max-width: 1200px)': {
+        '@media (min-width: 1024px)': {
             width: '35%'
         }
     },
@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
             height: '700px'
         },
         // Laptop (small) & Desktop screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '60%',
             height: '100%',
             gap: '0 2rem'
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
             height: 'auto'
         },
         // Laptop (small) & Desktop screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '44%',
             overflow: 'unset',
             border: '0'
@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
             transform: 'rotate(270deg)'
         },
         // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             transform: 'rotate(180deg)'
         }
     }
