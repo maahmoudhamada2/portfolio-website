@@ -12,52 +12,37 @@ const sectionStyle = StyleSheet.create({
         backgroundColor: '#eee'
     },
     sectionContainer: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: 'calc(1rem + 3vh)',
-            padding: '2rem'
-        }
+        width: '100%',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: 'calc(1rem + 3vh)',
+        padding: '2rem'
     },
     sectionHeader: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '1.1rem',
-            fontWeight: 'bold',
-            textAlign: 'center'
-        }
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '1.1rem',
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     headerTitle: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontSize: 'calc(1rem + 2vw)',
-            width: '50%',
-            color: 'red',
-        }
+        fontSize: 'calc(1rem + 2vw)',
+        width: '50%',
+        color: 'red',
     },
     headerSubTitle: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontSize: 'calc(2rem + 1vw)',
-            lineHeight: '3rem'
-        }
+        fontSize: 'calc(2rem + 1vw)',
+        lineHeight: '3rem'
     },
     headerParagraph: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            color: 'gray',
-            fontWeight: '100',
-            lineHeight: '1.7rem',
-            textAlign: 'center'
-        }
+        width: '70%',
+        color: 'gray',
+        fontWeight: '100',
+        lineHeight: '1.7rem',
+        textAlign: 'center'
     }
 })
 export default function SectionHoc(WrappedComponent) {
