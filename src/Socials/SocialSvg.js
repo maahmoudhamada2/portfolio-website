@@ -5,12 +5,12 @@ const iconStyle = StyleSheet.create({
         // Shared CSS styles for all sizes
         backgroundColor: 'transparent',
         // Mobile screen width
-        '@media (min-width: 320px) and (max-width: 1200px)': {
+        '@media (min-width: 320px)': {
             width: 'calc(1rem + 3vw)',
             height: 'calc(1rem + 3vh)',
         },
         // Laptop & Desktop screens width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: 'calc(1rem + 3.5vw)',
             height: 'calc(1rem + 3.5vh)',
             ':hover path': {
@@ -20,7 +20,7 @@ const iconStyle = StyleSheet.create({
         }
     },
     path: {
-        fill: 'white',
+        fill: 'white', 
         transition: 'fill 0.5s'
     }
 })
