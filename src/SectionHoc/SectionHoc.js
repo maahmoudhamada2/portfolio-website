@@ -38,11 +38,14 @@ const sectionStyle = StyleSheet.create({
         lineHeight: '3rem'
     },
     headerParagraph: {
-        width: '70%',
+        width: '100%',
         color: 'gray',
         fontWeight: '100',
         lineHeight: '1.7rem',
-        textAlign: 'center'
+        textAlign: 'center',
+        '@media (min-width: 786px)': {
+            width: '60%',
+        }
     }
 })
 export default function SectionHoc(WrappedComponent) {
