@@ -6,17 +6,15 @@ import { ArrowIcon, ClangIcon, CssIcon, HtmlIcon, JavaScriptIcon, MySqlIcon, Pyt
 const styles = StyleSheet.create({
 
     sectionContainer: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            height: 'auto',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            boxShadow: 'rgba(0, 0, 0, 0.7) 0px 4px 8px 0px',
-            transition: 'width 0.5s',
-            borderRadius: '40px',
-            backgroundColor: 'white',
-        },
+        // Shared CSS styles for all sizes
+        height: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+        boxShadow: 'rgba(0, 0, 0, 0.7) 0px 4px 8px 0px',
+        transition: 'width 0.5s',
+        borderRadius: '40px',
+        backgroundColor: 'white',
         // Mobile screen width
         '@media (min-width: 320px) and (max-width: 481px)': {
             width: '100vw'
@@ -26,9 +24,9 @@ const styles = StyleSheet.create({
             width: '90%'
         },
 
-        // Laptop (small) screens width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
-            width: '50vw',
+        // Laptop (small) & Desktop screens width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
+            width: '450px',
             height: '650px',
             flexDirection: 'row'
         },
@@ -38,48 +36,44 @@ const styles = StyleSheet.create({
         },
     },
     sectionHeader: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
+        // Shared CSS styles for all sizes
+        width: '100%',
+        padding: '4rem 2rem',
+        display: 'flex',
+        gap: '2rem',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        textAlign: 'center',
+        backgroundImage: `url('${skillsBG}')`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        borderRadius: '40px',
+        position: 'relative',
+        transition: 'width 0.5s',
+        zIndex: '1',
+        ':before': {
+            content: "''",
             width: '100%',
-            padding: '4rem 2rem',
-            display: 'flex',
-            gap: '2rem',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            textAlign: 'center',
-            backgroundImage: `url('${skillsBG}')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            borderRadius: '40px',
-            position: 'relative',
-            transition: 'width 0.5s',
-            zIndex: '1',
-            ':before': {
-                content: "''",
-                width: '100%',
-                height: '100%',
-                position: 'absolute',
-                top: '0',
-                left: '0',
-                backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                zIndex: '-1',
-                borderRadius: '40px'
-            }
-        },
+            height: '100%',
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            zIndex: '-1',
+            borderRadius: '40px'
+        }
     },
     headerTitle: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontWeight: 'bold',
-            borderBottom: '4px solid white',
-            letterSpacing: '0.4rem',
-            margin: '1rem 0.5rem',
-            fontStyle: 'italic',
-            padding: '0.5rem'
-        },
+        // Shared CSS styles for all sizes
+        fontWeight: 'bold',
+        borderBottom: '4px solid white',
+        letterSpacing: '0.4rem',
+        margin: '1rem 0.5rem',
+        fontStyle: 'italic',
+        padding: '0.5rem',
         // Mobile screen width 
         '@media (min-width: 320px) and (max-width: 481px)': {
             fontSize: 'calc(1rem + 12vw)'
@@ -89,9 +83,13 @@ const styles = StyleSheet.create({
             fontSize: 'calc(1rem + 10vw)',
         },
 
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        // Laptop (small) & Desktop screen width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             fontSize: 'calc(1rem + 7vw)'
+        },
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            fontSize: 'calc(1rem + 5vw)'
         },
         // Fix design issue
         '@media (min-width: 655px) and (max-width: 786px)': {
@@ -100,13 +98,11 @@ const styles = StyleSheet.create({
         },
     },
     headerParagraph: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            lineHeight: '2rem',
-            textAlign: 'center'
-        },
-        // Tabel screen width
+        // Shared CSS styles for all sizes
+        width: '100%',
+        lineHeight: '2rem',
+        textAlign: 'center',
+        // Tablet screen width
         '@media (min-width: 481px) and (max-width: 786px)': {
             fontSize: 'calc(0.5rem + 2vw)',
         },
@@ -114,92 +110,85 @@ const styles = StyleSheet.create({
         '@media (min-width: 655px) and (max-width: 786px)': {
             fontSize: 'calc(0.5rem + 1.7vw)'
         },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        // Laptop (small) & Desktop screen width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             fontSize: 'calc(1rem + 0.3vw)'
+        },
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            fontSize: 'calc(1rem + 0.2vw)'
         }
 
     },
     downloadBtn: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            padding: 'calc(0.5rem + 2vh)',
-            border: '0px',
-            backgroundColor: 'red',
-            color: 'white',
-            fontSize: 'calc(0.8rem + 1vw)',
-            lineHeight: 'calc(0.5rem + 2vh)',
-        },
+        // Shared CSS styles for all sizes
+        padding: 'calc(0.5rem + 2vh)',
+        border: '0px',
+        backgroundColor: 'red',
+        color: 'white',
+        fontSize: 'calc(0.8rem + 1vw)',
+        lineHeight: 'calc(0.5rem + 2vh)',
     },
     arrowBtn: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            display: 'flex',
-            backgroundColor: 'white',
-            borderRadius: '50%',
-            border: '0px',
-            marginTop: '1.5rem',
-            cursor: 'pointer',
-            transition: 'transform 0.5s',
-        },
+        // Shared CSS styles for all sizes
+        display: 'flex',
+        backgroundColor: 'white',
+        borderRadius: '50%',
+        border: '0px',
+        marginTop: '1.5rem',
+        cursor: 'pointer',
+        transition: 'transform 0.5s',
         // Mobile & Tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             transform: 'rotate(90deg)'
         },
     },
     langContainer: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            overflow: 'hidden',
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            gap: '2rem',
-            transition: 'all 0.5s',
-        },
+        // Shared CSS styles for all sizes
+        overflow: 'hidden',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        gap: '2rem',
+        transition: 'all 0.5s',
         // Mobile & Tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '0',
         },
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        // Laptop (small) & Desktop screens width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             width: '0'
         }
     },
     langContainerDivs: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            overflow: 'hidden',
-            display: 'flex',
-            flexDirection: 'column',
-            flexWrap: 'wrap',
-            gap: '0.5rem',
-        },
+        // Shared CSS styles for all sizes
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        gap: '0.5rem',
         // Mobile & Tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             width: '100%',
             height: '0',
             alignItems: 'center'
         },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px': {
+        // Laptop (small) & Desktop screen width
+        '@media (min-width: 786px) and (max-width: 1200px': {
             width: '0',
         }
     },
     langTitle: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontWeight: 'bold',
-            marginTop: '1rem'
-        }
+        // Shared CSS styles for all sizes
+        fontWeight: 'bold',
+        marginTop: '1rem'
     },
     langDescription: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            fontSize: '0.9rem',
-            color: 'gray',
-            lineHeight: '1.2rem',
-        },
+        // Shared CSS styles for all sizes
+        fontSize: '0.9rem',
+        color: 'gray',
+        lineHeight: '1.2rem',
         // Mobile & Tablet screens width
         '@media (min-width: 320px) and (max-width: 786px)': {
             textAlign: 'center'
@@ -209,13 +198,11 @@ const styles = StyleSheet.create({
     // -------------------------------------------------------  Expand Styles ---------------------------------------------------------
 
     expandSectionContainer: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            padding: '0',
-            transition: 'width 0.5s'
-        },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        // Shared CSS styles for all sizes
+        padding: '0',
+        transition: 'width 0.5s',
+        // Laptop (small) & Desktop screen width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             width: '100%',
         }
     },
@@ -226,17 +213,19 @@ const styles = StyleSheet.create({
         },
         // Laptop (small) screen width
         '@media (min-width: 786px) and (max-width: 1024px)': {
-            width: '50%',
+            width: '40%',
             padding: '4rem 1rem'
+        },
+        // Desktop screen width
+        '@media (min-width: 1024px) and (max-width: 1200px)': {
+            width: '35%'
         }
     },
     expandLangContainer: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            padding: '1rem 2rem',
-            transition: 'all 0.5s',
-            alignItems: 'center'
-        },
+        // Shared CSS styles for all sizes
+        padding: '1rem 2rem',
+        transition: 'all 0.5s',
+        alignItems: 'center',
         // Mobile screen width
         '@media (min-width: 320px) and (max-width: 481px)': {
             height: '1360px'
@@ -245,19 +234,17 @@ const styles = StyleSheet.create({
         '@media (min-width: 481px) and (max-width: 786px)': {
             height: '700px'
         },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        // Laptop (small) & Desktop screen width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             width: '60%',
             height: '100%',
             gap: '0 2rem'
         }
     },
     expandLangContDivs: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            height: '200px',
-            borderBottom: '1px solid gray'
-        },
+        // Shared CSS styles for all sizes
+        height: '200px',
+        borderBottom: '1px solid gray',
         // Mobile screen width
         '@media (min-width: 320px) and (max-width: 481px)': {
             width: '100%',
@@ -266,25 +253,25 @@ const styles = StyleSheet.create({
         // Tablet screen width
         '@media (min-width: 481px) and (max-width: 786px)': {
             width: '44%',
+            paddingBottom: '1rem',
+            height: 'auto'
         },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        // Laptop (small) & Desktop screen width
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             width: '44%',
             overflow: 'unset',
             border: '0'
         }
     },
     expandArrowBtn: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            transition: 'transform 0.5s'
-        },
+        // Shared CSS styles for all sizes
+        transition: 'transform 0.5s',
         // Mobile & Tablet screens width 
         '@media (min-width: 320px) and (max-width: 786px)': {
             transform: 'rotate(270deg)'
         },
         // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
+        '@media (min-width: 786px) and (max-width: 1200px)': {
             transform: 'rotate(180deg)'
         }
     }
