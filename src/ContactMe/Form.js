@@ -2,89 +2,59 @@ import { StyleSheet, css } from "aphrodite/no-important";
 
 const styles = StyleSheet.create({
     sectionContainer: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            height: '600px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            marginTop: '2rem',
-            padding: '1rem',
-            gap: '1rem',
-            border: '4px solid transparent',
-            borderRadius: '40px',
-            backgroundColor: 'rgba(20, 21, 24, 0.99)',
-            transition: '0.5s',
-        },
-        // Small Tablet screen width
-        '@media (min-width: 481px) and (max-width: 546px)': {
-            width: '100%',
-        },
-        // Tablet screen width
-        '@media (min-width: 547px) and (max-width: 786px)': {
-            width: 'calc(1rem + 65vw)'
-        },
-        // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1024px)': {
-            minWidth: '60%',
-            maxWidth: '60%'
-        }
+        // Shared CSS styles for all sizes
+        width: '500px',
+        height: '600px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginTop: '2rem',
+        padding: '1rem',
+        gap: '1rem',
+        border: '4px solid transparent',
+        borderRadius: '40px',
+        backgroundColor: 'rgba(20, 21, 24, 0.99)',
+        transition: '0.5s',
     },
     formTitle: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            marginTop: '1rem',
-            color: 'rgb(100, 255, 218)',
-            fontWeight: 'bold',
-            fontSize: '1.2rem'
-        }
+        marginTop: '1rem',
+        color: 'rgb(100, 255, 218)',
+        fontWeight: 'bold',
+        fontSize: '1.2rem'
     },
     form: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            padding: '1rem',
-            gap: '1rem',
-            borderRadius: '40px'
-        }
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '1rem',
+        gap: '1rem',
+        borderRadius: '40px'
     },
     formFields: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '100%',
-            padding: '1rem',
-            border: '0',
-            borderRadius: '20px',
-            backgroundColor: 'black',
-            color: 'gray',
-            outline: '0',
-            fontWeight: 'bold'
-        }
+        width: '100%',
+        padding: '1rem',
+        border: '0',
+        borderRadius: '20px',
+        backgroundColor: 'black',
+        color: 'gray',
+        outline: '0',
+        fontWeight: 'bold'
     },
     textAreaField: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            height: '200px'
-        }
+        height: '200px'
     },
     formSubmitBtn: {
-        // Mobile, Tablet & Laptop (small) screens width
-        '@media (min-width: 320px) and (max-width: 1024px)': {
-            width: '44%',
-            padding: '1rem',
-            color: 'gray',
-            backgroundColor: 'black',
-            borderRadius: '20px',
-            outline: '0',
-            fontWeight: 'bold',
-            marginTop: '1rem',
-            border: '2px solid rgb(100, 255, 218)',
-            cursor: 'pointer'
-        }
+        width: '44%',
+        padding: '1rem',
+        color: 'gray',
+        backgroundColor: 'black',
+        borderRadius: '20px',
+        outline: '0',
+        fontWeight: 'bold',
+        marginTop: '1rem',
+        border: '2px solid rgb(100, 255, 218)',
+        cursor: 'pointer'
     }
 })
 
