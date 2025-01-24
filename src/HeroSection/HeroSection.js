@@ -38,7 +38,7 @@ const heroStyle = StyleSheet.create({
         lineHeight: '3.5rem',
         color: 'red',
         // Laptop (small) screen width
-        '@media (min-width: 767px) and (max-width: 1200px)': {
+        '@media (min-width: 767px)': {
             fontSize: 'calc(1.5rem + 2.5vw)'
         }
     },
@@ -49,7 +49,7 @@ const heroStyle = StyleSheet.create({
         fontSize: 'calc(2rem + 2vw)',
         margin: 'calc(1rem + 1vh) 0',
         // Laptop (small) screen width
-        '@media (min-width: 767px) and (max-width: 1200px)': {
+        '@media (min-width: 767px)': {
             fontSize: 'calc(1.5rem + 3vw)',
             margin: 'calc(1rem + 1.5vh) 0',
         }
@@ -83,13 +83,13 @@ const heroStyle = StyleSheet.create({
         // Shared CSS styles for all sizes
         color: 'white',
         // Mobile & Tablet screen width
-        '@media (min-width: 320px) and (max-width: 1200px)': {
+        '@media (min-width: 320px)': {
             width: 'calc(9rem + 3vw)',
             height: 'calc(3rem + 2vh)',
             fontSize: 'calc(0.9rem + 1vw)',
         },
         // Laptop (small) screen width
-        '@media (min-width: 767px) and (max-width: 1200px)': {
+        '@media (min-width: 767px)': {
             width: 'calc(9rem + 3.5vw)',
             height: 'calc(3rem + 2.5vh)',
         }
