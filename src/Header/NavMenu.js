@@ -14,7 +14,7 @@ const navMenuStyle = StyleSheet.create({
             width: '60vw',
         },
         // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '70%'
         }
     },
@@ -90,7 +90,7 @@ const navMenuStyle = StyleSheet.create({
             width: '50vw'
         },
         // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             width: '100%',
             height: '100%',
             justifyContent: 'space-around',

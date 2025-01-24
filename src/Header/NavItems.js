@@ -13,7 +13,7 @@ const navItemsStyle = StyleSheet.create({
             textAlign: 'center'
         },
         // Laptop (small) screen width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             fontSize: 'calc(1rem + 0.5vw)'
         }
     },
@@ -22,7 +22,7 @@ const navItemsStyle = StyleSheet.create({
         color: 'white',
         textDecoration: 'none',
         // Laptop & Desktop screens width
-        '@media (min-width: 786px) and (max-width: 1200px)': {
+        '@media (min-width: 786px)': {
             ':hover': {
                 color: 'red',
                 transition: 'all 0.5s'
