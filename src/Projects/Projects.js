@@ -9,7 +9,13 @@ export default function Projects() {
     const dataApi_url = 'https://677baf7820824100c07a6e6a.mockapi.io/portfoli-data/api/v1/projects';
     useEffect(() => {
         fetch(dataApi_url)
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok || response.status !== 200) {
+                    return []
+                } else {
+                    return response.json()
+                }
+            })
             .then((data) => setProjectData(data))
     }, [])
     return (
