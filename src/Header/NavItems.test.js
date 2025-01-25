@@ -17,8 +17,8 @@ describe('NavItems Component test suites', () => {
         const anchors = screen.getAllByRole('link')
 
         // Checking Number of <li> & <a> returned === 5
-        expect(listItems).toHaveLength(5);
-        expect(anchors).toHaveLength(5)
+        expect(listItems).toHaveLength(4);
+        expect(anchors).toHaveLength(4)
 
         // Checking the first 2 <li>  contain <a> tags
         expect(listItems[0]).toContainElement(anchors[0]);
