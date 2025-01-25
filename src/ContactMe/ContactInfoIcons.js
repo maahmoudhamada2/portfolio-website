@@ -1,7 +1,23 @@
+import { StyleSheet, css } from "aphrodite/no-important";
+
+const styles = StyleSheet.create({
+    svg: {
+        verticalAlign: "middle",
+        fill: "currentColor",
+        overflow: "hidden",
+        width: '5rem',
+        height: '5rem',
+        '@media (min-width: 481px)': {
+            width: '7rem',
+            height: '7rem'
+        }
+    }
+})
 
 export const LocationPinIcon = () => {
     return (
         <svg
+            role="img"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 395.71 395.71"
@@ -24,6 +40,7 @@ export const LocationPinIcon = () => {
 export const PhoneCallIcon = () => {
     return (
         <svg
+            role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             width="75px"
@@ -42,6 +59,7 @@ export const PhoneCallIcon = () => {
 export const MailIcon = () => {
     return (
         <svg
+            role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1920 1920"
             width="70px"
@@ -57,3 +75,24 @@ export const MailIcon = () => {
     );
 };
 
+
+
+export const CheckmarkIcon = () => {
+    return (
+        <svg
+            role="img"
+            className={css(styles.svg)}
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+
+            }}
+            viewBox="0 0 1024 1024"
+            version="1.1"
+        >
+            <path
+                d="M512 0C229.668571 0 0 229.668571 0 512s229.668571 512 512 512 512-229.668571 512-512S794.331429 0 512 0z m307.2 343.771429s-267.702857 295.497143-327.68 365.714285c-59.977143 70.217143-106.788571 0-106.788571 0L210.651429 529.554286s-27.794286-42.422857 21.942857-81.92c46.811429-38.034286 84.845714 0 84.845714 0l122.88 128.731428L746.057143 291.108571s29.257143-20.48 59.977143 5.851429c23.405714 21.942857 13.165714 46.811429 13.165714 46.811429z"
+                fill="#68BF7B"
+            />
+        </svg>
+    );
+};

@@ -1,4 +1,6 @@
 import { StyleSheet, css } from "aphrodite/no-important";
+import { useState } from "react";
+import { CheckmarkIcon } from "./ContactInfoIcons";
 
 const styles = StyleSheet.create({
     sectionContainer: {
@@ -44,6 +46,7 @@ const styles = StyleSheet.create({
     textAreaField: {
         height: '200px'
     },
+
     formSubmitBtn: {
         width: '44%',
         padding: '1rem',
@@ -55,20 +58,72 @@ const styles = StyleSheet.create({
         marginTop: '1rem',
         border: '2px solid rgb(100, 255, 218)',
         cursor: 'pointer'
+    },
+    submited: {
+        justifyContent: 'center',
+        border: '2px solid rgb(100, 255, 218)',
+        gap: '1.5rem',
+        '@media (min-width: 481px)': {
+            fontSize: '1.5rem'
+        }
     }
 })
 
 export default function Form() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+    })
+
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSuccess(true)
+        setFormData({ name: "", email: "", subject: "", message: "" })
+    }
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData({ ...formData, [name]: value })
+    }
+    const inputAttr = [
+        { name: 'name', type: 'text', placeholder: 'Name' },
+        { name: 'email', type: 'email', placeholder: 'Email' },
+        { name: 'subject', type: 'subject', placeholder: 'Subject' }
+    ]
     return (
-        <section className={css(styles.sectionContainer)}>
-            <h2 className={css(styles.formTitle)}>Get In Touch</h2>
-            <form className={css(styles.form)}>
-                <input className={css(styles.formFields)} placeholder="Name"></input>
-                <input className={css(styles.formFields)} placeholder="Email"></input>
-                <input className={css(styles.formFields)} placeholder="Subject"></input>
-                <textarea className={css(styles.formFields, styles.textAreaField)} placeholder="Message"></textarea>
-                <input className={css(styles.formSubmitBtn)} type="submit"></input>
-            </form>
+        <section className={css(styles.sectionContainer, success && styles.submited)}>
+            {
+                success
+                    ? <>
+                        <CheckmarkIcon />
+                        <p>Thank you!</p>
+                        <p>Your submission has been sent</p>
+                        <button className={css(styles.formSubmitBtn)} onClick={() => setSuccess(false)}>Return</button>
+                    </>
+                    : <>
+                        <h2 className={css(styles.formTitle)}>Get In Touch</h2>
+                        <form onSubmit={handleSubmit} className={css(styles.form)}>
+                            {inputAttr.map((elem, idx) => {
+                                return <input
+                                    key={idx}
+                                    className={css(styles.formFields)}
+                                    onChange={handleChange}
+                                    name={elem.name}
+                                    type={elem.type}
+                                    placeholder={elem.placeholder}
+                                    required />
+                            })}
+                            <textarea
+                                className={css(styles.formFields, styles.textAreaField)}
+                                placeholder="Message"
+                                required></textarea>
+                            <input className={css(styles.formSubmitBtn)} type="submit"></input>
+                        </form>
+                    </>
+            }
         </section>
     )
 }
