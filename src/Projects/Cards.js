@@ -149,7 +149,7 @@ export default function Cards({ data }) {
     return (
         <>
             {
-                data.length === 0
+               !data || data.length === 0
                     ? <section className={css(cardStyle.comingSoon)}></section>
                     : <div className={css(cardStyle.latestContainer)}>
                         {data.map((elem, idx) => {
