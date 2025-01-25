@@ -6,7 +6,7 @@ import * as Projects from '../Projects/Projects';
 import * as ContactMe from '../ContactMe/ContactMe';
 import * as AboutMe from '../AboutMe/AboutMe';
 import * as Footer from '../Footer/Footer';
-import * as ScrollTop from '../../ScrollTop/ScrollTop';
+import * as ScrollTop from '../ScrollTop/ScrollTop';
 import App from './App'
 
 
