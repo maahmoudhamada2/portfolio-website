@@ -1,6 +1,6 @@
 import { StyleSheet, css } from "aphrodite/no-important";
 import { useState } from "react";
-import { CheckmarkIcon } from "./ContactInfoIcons";
+import { CheckmarkIcon } from "./ContactMeIcons";
 
 const styles = StyleSheet.create({
     sectionContainer: {
@@ -81,17 +81,19 @@ export default function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSuccess(true)
         setFormData({ name: "", email: "", subject: "", message: "" })
+        setSuccess(true)
     }
+
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
     }
+
     const inputAttr = [
         { name: 'name', type: 'text', placeholder: 'Name' },
         { name: 'email', type: 'email', placeholder: 'Email' },
-        { name: 'subject', type: 'subject', placeholder: 'Subject' }
+        { name: 'subject', type: 'text', placeholder: 'Subject' }
     ]
     return (
         <section className={css(styles.sectionContainer, success && styles.submited)}>
@@ -112,11 +114,15 @@ export default function Form() {
                                     className={css(styles.formFields)}
                                     onChange={handleChange}
                                     name={elem.name}
+                                    value={formData[elem.name]}
                                     type={elem.type}
                                     placeholder={elem.placeholder}
                                     required />
                             })}
                             <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
                                 className={css(styles.formFields, styles.textAreaField)}
                                 placeholder="Message"
                                 required></textarea>

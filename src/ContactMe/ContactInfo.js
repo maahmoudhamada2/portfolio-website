@@ -1,5 +1,5 @@
 import { StyleSheet, css } from "aphrodite/no-important";
-import { LocationPinIcon, MailIcon, PhoneCallIcon } from "./ContactInfoIcons"
+import { LocationPinIcon, MailIcon, PhoneCallIcon } from "./ContactMeIcons"
 
 const contactInfoStyle = StyleSheet.create({
     sectionContainer: {
