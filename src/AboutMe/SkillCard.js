@@ -1,5 +1,5 @@
 import { StyleSheet, css } from 'aphrodite/no-important';
-import skillsBG from '../assets/skill.jpg'
+import skillsBG from '../assets/skill.jpg';
 import { useState } from 'react';
 import { ArrowIcon, ClangIcon, CssIcon, HtmlIcon, JavaScriptIcon, MySqlIcon, PythonIcon } from './LangIcons';
 
@@ -120,13 +120,32 @@ const styles = StyleSheet.create({
         }
 
     },
-    downloadBtn: {
-        // Shared CSS styles for all sizes
-        padding: 'calc(0.5rem + 2vh)',
-        border: '0px',
-        backgroundColor: 'red',
+
+    anchors: {
         color: 'white',
-        fontSize: 'calc(0.8rem + 1vw)',
+        textDecoration: 'none',
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        cursor: 'pointer',
+        padding: '1rem',
+        backgroundColor: 'red',
+        transition: 'all 0.5s',
+        borderRadius: '14px',
+        border: '1px solid transparent',
+        '@media (min-width: 1024px)': {
+            ':hover': {
+                backgroundColor: 'transparent',
+                border: '1px solid red'
+            }
+        }
+    },
+    downloadBtn: {
+        width: '170px',
+        border: '0px',
+        backgroundColor: 'transparent',
+        color: 'white',
+        fontSize: '1rem',
         lineHeight: 'calc(0.5rem + 2vh)',
     },
     arrowBtn: {
@@ -316,7 +335,9 @@ export default function SkillCard() {
             <header className={css(styles.sectionHeader, expand && styles.expandSectionHeader)}>
                 <h2 className={css(styles.headerTitle)}>Skills</h2>
                 <p className={css(styles.headerParagraph)}>Versatile developer with expertise in various programming languages and web technologies, committed to building efficient, scalable, and user-friendly applications.</p>
-                <button className={css(styles.downloadBtn)}>Download Resume</button>
+                <button className={css(styles.downloadBtn)}>
+                    <a className={css(styles.anchors)} href="/myCv.pdf" download="Mahmoud_resume.pdf">Download Resume</a>
+                </button>
                 <button onClick={handlingExpand} className={css(styles.arrowBtn, expand && styles.expandArrowBtn)}><ArrowIcon /></button>
             </header>
             <div className={css(styles.langContainer, expand && styles.expandLangContainer)}>
