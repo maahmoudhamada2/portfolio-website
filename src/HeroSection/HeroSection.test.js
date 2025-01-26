@@ -59,13 +59,23 @@ describe('HeroSection component test suites', () => {
         // Check div > buttons
         expect(ctaBtns).toHaveLength(2)
 
-        // Check Contact Me <button> element
-        expect(ctaBtns[0]).toHaveTextContent('Contact Me')
-        expect(ctaBtns[0]).toHaveClass(/^ctaBtns_.+-primBtn_.+/)
+        // Check Contact Me <button> & <a> elements
+        expect(ctaBtns[0]).toHaveClass(/^ctaBtns_.+/)
+        expect(within(ctaBtns[0]).getByRole('link')).toBeInTheDocument()
+        expect(within(ctaBtns[0]).getByRole('link')).toHaveTextContent('Contact Me')
+        expect(within(ctaBtns[0]).getByRole('link')).toHaveAttribute('href', '#contactme')
+        expect(within(ctaBtns[0]).getByRole('link')).toHaveTextContent('Contact Me')
+        expect(within(ctaBtns[0]).getByRole('link')).toHaveClass(/^btnsAnchors_.+-primBtn_.+/)
 
-        // Check About Me <button> element
-        expect(ctaBtns[1]).toHaveTextContent('About Me')
-        expect(ctaBtns[1]).toHaveClass(/^ctaBtns_.+-secBtn_.+/)
+        // Check About Me <button> & <a> elements
+        expect(ctaBtns[1]).toHaveClass(/^ctaBtns_.+/)
+        expect(within(ctaBtns[1]).getByRole('link')).toHaveTextContent('About Me')
+        expect(within(ctaBtns[1]).getByRole('link')).toHaveAttribute('href', '#aboutme')
+        expect(within(ctaBtns[1]).getByRole('link')).toHaveTextContent('About Me')
+        expect(within(ctaBtns[1]).getByRole('link')).toHaveClass(/^btnsAnchors_.+-secBtn_.+/)
+
+
+
     })
     it('Test 3 - Check component renders child components correctly', () => {
         render(<HeroSection />);
