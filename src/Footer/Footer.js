@@ -21,10 +21,11 @@ const footerStyle = StyleSheet.create({
     }
 })
 export default function Footer() {
+    const fullYear = () => new Date().getFullYear()
     return (
         <footer className={css(footerStyle.footerContainer)}>
             <Socials />
-            <p className={css(footerStyle.copyRight)}>© 2024 Mahmoud Hamada. All rights reserved.</p>
+            <p className={css(footerStyle.copyRight)}>© {fullYear()} Mahmoud Hamada. All rights reserved.</p>
         </footer>
     )
 }
