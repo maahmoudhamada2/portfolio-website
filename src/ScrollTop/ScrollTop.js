@@ -4,7 +4,7 @@ import BackTopIcon from "./BackTopIcon"
 
 const buttonStyle = StyleSheet.create({
     btnContainer: {
-        width:'50px',
+        width: '50px',
         height: '50px',
         opacity: '0',
         position: 'fixed',
@@ -32,7 +32,7 @@ export default function ScrollTop() {
     }
     const scrollTop = () => {
         window.scroll({
-            top: '0'
+            top: 0
         })
     }
     useEffect(() => {
