@@ -81,8 +81,9 @@ export default function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setFormData({ name: "", email: "", subject: "", message: "" })
+        localStorage.setItem('formData', JSON.stringify(formData));
         setSuccess(true)
+        setFormData({ name: "", email: "", subject: "", message: "" })
     }
 
     const handleChange = (e) => {
