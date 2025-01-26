@@ -48,7 +48,12 @@ describe('SkillCard Component test suites', () => {
         expect(headerBtns).toHaveLength(2)
         expect(headerTitle).toHaveTextContent(/Skills/)
         expect(headerParag).toHaveTextContent(/Versatile developer with/)
-        expect(headerBtns[0]).toHaveTextContent(/Download Resume/)
+
+        // Check Download Resume button
+        expect(within(headerBtns[0]).getByRole('link')).toBeInTheDocument()
+        expect(within(headerBtns[0]).getByRole('link')).toHaveAttribute('href', '/myCv.pdf')
+        expect(within(headerBtns[0]).getByRole('link')).toHaveAttribute('download', 'Mahmoud_resume.pdf')
+        expect(within(headerBtns[0]).getByRole('link')).toHaveClass(/^anchors_.+/)
 
         // Get Child HTML elements of (langContDivs | First & second only) 
         const langTitleOne = within(langContDivs[0]).getByRole('heading');
