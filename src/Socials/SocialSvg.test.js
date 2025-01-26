@@ -44,7 +44,7 @@ describe('GithubIcon compoenent test Suites', () => {
 
         // Check path element presence & css class
         expect(path).toBeInTheDocument();
-        // expect(path).toHaveClass(/^path_.+/)
+        expect(path).toHaveClass(/^path_.+/)
     })
 })
 
