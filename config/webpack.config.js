@@ -8,7 +8,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '../dist')
     },
-    mode: 'development',
+    mode: 'production',
     devServer: {
         static: path.resolve(__dirname, '../dist'),
         open: true,
@@ -31,6 +31,9 @@ module.exports = {
                 use: 'babel-loader'
             }
         ]
+    },
+    performance: {
+        hints: false
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.resolve(__dirname, '../dist', 'index.html'),
