@@ -1,4 +1,4 @@
-import {render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { StyleSheetTestUtils } from 'aphrodite';
 import Footer from './Footer';
 import * as Socials from '../Socials/Socials'
@@ -24,7 +24,7 @@ describe('Footer Component test suites', () => {
 
         // Checking <p> presences, text & CSS class
         expect(paragraph).toBeInTheDocument();
-        expect(paragraph).toHaveTextContent('© 2024 Mahmoud Hamada. All rights reserved')
+        expect(paragraph).toHaveTextContent(`© ${new Date().getFullYear()} Mahmoud Hamada. All rights reserved`)
         expect(paragraph).toHaveClass(/^copyRight_.+/)
 
     })
