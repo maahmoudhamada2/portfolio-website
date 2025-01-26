@@ -3,7 +3,6 @@ import { LocationPinIcon, MailIcon, PhoneCallIcon } from "./ContactMeIcons"
 
 const contactInfoStyle = StyleSheet.create({
     sectionContainer: {
-        // Shared CSS styles for all sizes
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -11,11 +10,9 @@ const contactInfoStyle = StyleSheet.create({
         alignItems: 'center',
         marginTop: '4rem',
         gap: '4rem',
-        // Laptop (small) screen width
         '@media (min-width: 786px)': {
             gap: '3rem 0rem'
         },
-        // Desktop screen width 
         '@media (min-width: 1024px)': {
             flexDirection: 'row',
             gap: '0'
@@ -37,11 +34,9 @@ const contactInfoStyle = StyleSheet.create({
         margin: '2rem 0 1rem 0',
         color: 'red',
         letterSpacing: '0.2rem',
-        // Mobile width screen
         '@media (min-width: 320px) and (max-width: 481px)': {
             fontSize: '1.2rem'
         },
-        // Desktop screen width 
         '@media (min-width: 1024px)': {
             fontSize: '1.5rem',
             marginBottom: '0.9rem'

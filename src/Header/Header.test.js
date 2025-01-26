@@ -9,7 +9,7 @@ const spyOnNavMenu = jest.spyOn(NavMenu, 'default');
 
 describe('Header Component test suite', () => {
     afterAll(() => {
-        spyOnNavMenu.mockRestore()
+        jest.clearAllMocks();
     })
     
     it('Test 1 - Check rendering without crashing', () => {

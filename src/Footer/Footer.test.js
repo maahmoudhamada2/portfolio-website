@@ -7,6 +7,9 @@ const spyOnSocials = jest.spyOn(Socials, 'default')
 StyleSheetTestUtils.suppressStyleInjection()
 
 describe('Footer Component test suites', () => {
+    afterAll(() => {
+        jest.clearAllMocks();
+    })
     it('Test 1 - Check Component renders without crashing', () => {
         render(<Footer />);
     })
