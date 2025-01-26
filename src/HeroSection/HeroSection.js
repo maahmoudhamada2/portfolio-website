@@ -81,7 +81,9 @@ const heroStyle = StyleSheet.create({
     },
     ctaBtns: {
         // Shared CSS styles for all sizes
+        backgroundColor: 'transparent',
         color: 'white',
+        border: '0',
         // Mobile & Tablet screen width
         '@media (min-width: 320px)': {
             width: 'calc(9rem + 3vw)',
@@ -94,14 +96,6 @@ const heroStyle = StyleSheet.create({
             height: 'calc(3rem + 2.5vh)',
         }
     },
-    primBtn: {
-        backgroundColor: 'red',
-        border: '0',
-    },
-    secBtn: {
-        backgroundColor: 'transparent',
-        border: '2px solid red'
-    },
     btnsAnchors: {
         display: 'flex',
         justifyContent: 'center',
@@ -110,6 +104,25 @@ const heroStyle = StyleSheet.create({
         height: '100%',
         color: 'white',
         textDecoration: 'none',
+        transition: 'all 0.5s',
+    },
+    primBtn: {
+        backgroundColor: 'red',
+        '@media (min-width: 1024px)': {
+            ':hover': {
+                backgroundColor: 'transparent',
+                border: '1px solid red'
+            }
+        }
+    },
+    secBtn: {
+        border: '2px solid red',
+        backgroundColor: 'transparent',
+        '@media (min-width: 1024px)': {
+            ':hover': {
+                backgroundColor: 'red'
+            }
+        }
     }
 })
 
@@ -127,11 +140,11 @@ export default function HeroSection() {
                     <span className={css(heroStyle.paragraphSpan)}>Front-End Developer</span>
                 </p>
                 <div className={css(heroStyle.ctaContainer)}>
-                    <button className={css(heroStyle.ctaBtns, heroStyle.primBtn)}>
-                        <a className={css(heroStyle.btnsAnchors)} href="#contactme">Contact Me</a>
+                    <button className={css(heroStyle.ctaBtns)}>
+                        <a className={css(heroStyle.btnsAnchors, heroStyle.primBtn)} href="#contactme">Contact Me</a>
                     </button>
-                    <button className={css(heroStyle.ctaBtns, heroStyle.secBtn)}>
-                        <a className={css(heroStyle.btnsAnchors)} href="#aboutme">About Me</a>
+                    <button className={css(heroStyle.ctaBtns)}>
+                        <a className={css(heroStyle.btnsAnchors, heroStyle.secBtn)} href="#aboutme">About Me</a>
                     </button>
                 </div>
                 <Socials />
