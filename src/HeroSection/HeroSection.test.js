@@ -7,6 +7,9 @@ StyleSheetTestUtils.suppressStyleInjection();
 const spyOnSocials = jest.spyOn(Socials, 'default');
 
 describe('HeroSection component test suites', () => {
+    afterAll(() => {
+        jest.clearAllMocks();
+    })
     it('Test 1 - Check component renders without crashing', () => {
         render(<HeroSection />)
     })

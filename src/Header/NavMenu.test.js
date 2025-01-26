@@ -10,7 +10,7 @@ const spyOnNavItems = jest.spyOn(NavItems, 'default')
 describe('NavMenu Compoenent test suites', () => {
 
     afterAll(() => {
-        spyOnNavItems.mockRestore()
+        jest.clearAllMocks();
     })
 
     it('Test 1 - Checking rendering without crashing', () => {

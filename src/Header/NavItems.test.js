@@ -1,4 +1,4 @@
-import { fireEvent, render, screen} from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import NavItems from './NavItems';
 import { StyleSheetTestUtils } from 'aphrodite';
 
@@ -6,6 +6,9 @@ StyleSheetTestUtils.suppressStyleInjection();
 const toggleMock = jest.fn();
 
 describe('NavItems Component test suites', () => {
+    afterAll(() => {
+        jest.clearAllMocks();
+    })
     it('Test 1 - Check component renders without crashing', () => {
         render(<NavItems />);
     })

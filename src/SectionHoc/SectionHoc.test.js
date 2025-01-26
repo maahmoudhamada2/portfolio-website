@@ -8,6 +8,9 @@ const mockComponent = ({ name }) => <h1>Hello, {name}</h1>
 const SectionBuilder = SectionHoc(mockComponent)
 
 describe('SectionHoc (HOC) component test suites', () => {
+    afterAll(() => {
+        jest.clearAllMocks();
+    })
     it('Test 1 - Check component renders without crashing', () => {
         render(<SectionBuilder />)
     })

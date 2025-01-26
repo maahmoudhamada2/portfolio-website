@@ -13,6 +13,9 @@ const spyOnLinkedIn = jest.spyOn(SocialSvgs, 'LinkedinIcon');
 const spyOnTwitter = jest.spyOn(SocialSvgs, 'TwitterIcon');
 
 describe('Socials component test suites', () => {
+    afterAll(() => {
+        jest.clearAllMocks();
+    })
     it('Test 1 - Check component renders without crashing', () => {
         render(<Socials />)
 
